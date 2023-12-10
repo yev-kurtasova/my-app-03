@@ -1,19 +1,11 @@
 import './SideBar.css';
 import data from "../../../data/data.json";
+import Topics from '../../Topics';
 
 function SideBar() {
     return (
         <div className="SideBar">
-            <nav>
-                {data.map((item, index) => {
-                    return(
-                        <li key={index}> 
-                    <a href={item.href}>{item.title}</a>
-                    </li>
-                    )
-                    
-                })}
-            </nav>
+            <Topics data={data}/>
 
         </div>
 
